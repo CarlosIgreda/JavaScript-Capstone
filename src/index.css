@@ -1,92 +1,102 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,900&family=Poppins:wght@300;400;600;700&display=swap');
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    list-style: none;
-    font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: #181818;
-    color: #fff;
+  background-color: #181818;
+  color: #fff;
+  padding: 0.5rem 2rem;
 }
 
 .logo-container {
-    width: 90px;
-    height: 90px;
+  width: 100px;
+  height: 100px;
 }
 
 .logo-img {
-    max-width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
 }
 
 .heart-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-heart {
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.fa-heart:hover {
+  color: red;
+  transform: scale(1.2);
 }
 
 .card-img {
-    height: 200px;
-    max-width: 100%;
+  height: 200px;
+  max-width: 100%;
 }
 
 .like-number {
-    text-align: right;
+  text-align: right;
 }
 
 .comment-btn {
-    display: block;
-    margin: auto;
-}
-
-.logo-container {
-    width: 35%;
-    height: 75px;
-    display: flex;
-    flex-direction: row;
-    align-self: flex-end;
+  display: block;
+  margin: auto;
 }
 
 .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-self: center;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
 }
 
 .nav-menu {
-    display: flex;
-    flex-direction: row;
-    gap: 15%;
-    align-self: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  align-self: center;
 }
 
 .menu-link {
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 2px 1px 2px gray;
-  }
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  text-shadow: 2px 1px 2px gray;
+  transition: all 300ms ease-in-out;
+}
+
+.menu-link:hover {
+  color: #ff3131;
+  transform: scale(1.2);
+}
 
 .page-title {
-    display: flex;
-    justify-content: center;
+  text-align: center;
+  padding: 3rem 0 5rem 0;
 }
 
 .movies-container {
-    margin: 0 10%;
+  margin: 0 10%;
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 70px 18%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 70px 18%;
 }
 
 .footer {
-    margin: 5%;
-    padding: 2%;
+  margin: 5%;
+  padding: 2%;
 }
-
