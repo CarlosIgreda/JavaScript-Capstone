@@ -70,7 +70,7 @@ The JavaScript capstone project (remember what they are?) is about building my o
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://carlosigreda.github.io/JavaScript-Capstone/)
+- [Live Demo Link](https://carlosigreda.github.io/JavaScript-Capstone/dist)
 - [Loom Video Link](https://www.loom.com/share/a2cdf21919484fd2a57ac18bf72fd699)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
