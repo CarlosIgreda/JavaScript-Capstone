@@ -17,96 +17,50 @@
         <a href="#"><img class="logo-img" src="https://i.postimg.cc/X7GN0Y6P/CINETFLIX.png" alt="movie1" /></a>
       </div>
       <ul class="nav-menu">
-        <li class="menu-link">Movies</li>
-        <li class="menu-link">Series</li>
-        <li class="menu-link">Genres</li>
-        <li class="menu-link">Credits</li>
+        <li class="menu-link count-movies">🍿Movies</li>
+        <li class="menu-link detail">|</li>
+        <li class="menu-link">📺Series</li>
+        <li class="menu-link detail">|</li>
+        <li class="menu-link">🎭Genres</li>
+        <li class="menu-link detail">|</li>
+        <li class="menu-link">👤Account</li>
       </ul>
     </nav>
   </header>
   <main>
-    <h1 class="page-title">Top Movies</h1>
     <section>
-      <div class="movies-container">
-        <div class="grid">
-            <div id="render-cards" class="movie-cards">
-              <img class="card-img" src="https://i.postimg.cc/0jWPyHqC/original-DB.jpg" alt="movie1" />
-              <div class="card-detail">
-                <div class="heart-container">
-                  <h4 class="movie-title">Movie 1</h4>
-                    <i class="fa-regular fa-heart"></i>
-                </div>
-                <div class="like-number">2 likes</div>
-              </div>
-              <button class="comment-btn" type="button">Comments</button>
-            </div>
-
-          <div id="render-cards" class="movie-cards">
-            <img class="card-img" src="https://i.postimg.cc/0jWPyHqC/original-DB.jpg" alt="movie1" />
-            <div class="card-detail">
-              <div class="heart-container">
-                <h4 class="movie-title">Movie 2</h4>
-                  <i class="fa-regular fa-heart"></i>
-              </div>
-              <div class="like-number">2 likes</div>
-            </div>
-            <button class="comment-btn" type="button">Comments</button>
-          </div>
-
-          <div id="render-cards" class="movie-cards">
-            <img class="card-img" src="https://i.postimg.cc/0jWPyHqC/original-DB.jpg" alt="movie1" />
-            <div class="card-detail">
-              <div class="heart-container">
-                <h4 class="movie-title">Movie 3</h4>
-                  <i class="fa-regular fa-heart"></i>
-              </div>
-              <div class="like-number">2 likes</div>
-            </div>
-            <button class="comment-btn" type="button">Comments</button>
-          </div>
-
-          <div id="render-cards" class="movie-cards">
-            <img class="card-img" src="https://i.postimg.cc/0jWPyHqC/original-DB.jpg" alt="movie1" />
-            <div class="card-detail">
-              <div class="heart-container">
-                <h4 class="movie-title">Movie 4</h4>
-                  <i class="fa-regular fa-heart"></i>
-              </div>
-              <div class="like-number">2 likes</div>
-            </div>
-            <button class="comment-btn" type="button">Comments</button>
-          </div>
-
-          <div id="render-cards" class="movie-cards">
-            <img class="card-img" src="https://i.postimg.cc/0jWPyHqC/original-DB.jpg" alt="movie1" />
-            <div class="card-detail">
-              <div class="heart-container">
-                <h4 class="movie-title">Movie 5</h4>
-                  <i class="fa-regular fa-heart"></i>
-              </div>
-              <div class="like-number">2 likes</div>
-            </div>
-            <button class="comment-btn" type="button">Comments</button>
-          </div>
-
-          <div id="render-cards" class="movie-cards">
-            <img class="card-img" src="https://i.postimg.cc/0jWPyHqC/original-DB.jpg" alt="movie1" />
-            <div class="card-detail">
-              <div class="heart-container">
-                <h4 class="movie-title">Movie 6</h4>
-                  <i class="fa-regular fa-heart"></i>
-              </div>
-              <div class="like-number">2 likes</div>
-            </div>
-            <button class="comment-btn" type="button">Comments</button>
-          </div>
-        </div>
+      <h1 class="page-title">🔥Top Movies🔥</h1>
+      <div class="movie-cards">
       </div>
     </section>
   </main>
+  <div class="popup-container">
+    <section class="popup">
+      <div class="popup-movie-title-container">
+        <h3 class="popup-movie-title"></h3>
+        <i class="fa-sharp fa-regular fa-circle-xmark fa-2xl x-icon"></i>
+      </div>
+      <div class="popup-movie-backdrop-container">
+        <img class="popup-movie-backdrop" src="" alt="backdrop-image">
+      </div>
+      <p class="popup-movie-overview format">Overview:<span class="popup-movie-overview-text format2"></span></p>
+      <p class="popup-movie-release format">Release date:<span class="popup-movie-release-text format2"></span></p>
+      <section class="comments-container">
+        <h5 class="comments-title format">Comments <span class="number-comments comments-title format"></span></h5>
+        <ul class="comments-table"></ul>
+      </section>
+      <section class="add-comment-container">
+        <h5 class="add-comment-title format">Add a comment</h5>
+        <input type="text" class="input input-name" placeholder="Your name">
+        <textarea class="input input-comment" name="comment" cols="30" rows="10" placeholder="Your comment"></textarea>
+        <button class="popup-comment-button" type="submit">Comment</button>
+      </section>
+    </section>
+  </div>
+  <script src="index.js" type="module"></script>
 </body>
 <footer class="footer">
-  Created by Carlos Igreda & Melanie Cascante under MIT License
+  Created by Carlos Igreda under MIT License.
 </footer>
 
 </html>
