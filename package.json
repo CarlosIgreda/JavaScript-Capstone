@@ -10,6 +10,8 @@
     "eslint-plugin-import": "^2.27.5",
     "html-webpack-plugin": "^5.5.1",
     "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "jsdom": "^22.0.0",
     "style-loader": "^3.3.2",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
@@ -213,6 +215,7 @@
     "minimist-options": "^4.1.0",
     "ms": "^2.1.2",
     "natural-compare": "^1.4.0",
+    "node-fetch": "^2.6.9",
     "node-releases": "^2.0.10",
     "normalize-package-data": "^3.0.3",
     "normalize-range": "^0.1.2",
@@ -336,7 +339,7 @@
     "zwitch": "^1.0.5"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "webpack serve --open",
     "dev": "webpack serve --mode development",
     "build": "webpack --mode production"
