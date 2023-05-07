@@ -1,4 +1,5 @@
 import './index.css';
+import countLikes from './modules/countLikes.js';
 
 const $movieCards = document.querySelector('.movie-cards');
 let movies = [];
@@ -56,7 +57,7 @@ const getComments = async (url) => {
 
 const renderData = () => {
   const $countMovies = document.querySelector('.count-movies');
-  $countMovies.textContent += ` (${movies.length})`;
+  countLikes($countMovies, movies.length);
   const $numberComments = document.querySelector('.number-comments');
   movies.forEach(async (movie) => {
     const $card = document.createElement('div');
