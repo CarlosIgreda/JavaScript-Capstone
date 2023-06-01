@@ -114,7 +114,6 @@ const renderData = () => {
     const $popUpContainer = document.querySelector('.popup-container');
     const $commentsTable = document.querySelector('.comments-table');
     $commentButton.addEventListener('click', async () => {
-      console.log(movie.id);
       comments = JSON.parse(localStorage.getItem(`comments_${movie.id}`)) || [];
       const $popUpMovieTitle = document.querySelector('.popup-movie-title');
       $popUpMovieTitle.textContent = movie.title;
@@ -126,11 +125,9 @@ const renderData = () => {
       $popUpMovieRelease.textContent = ` ${movie.release_date}`;
       $popUpContainer.style.display = 'flex';
 
-      // Obtenemos los comentarios existentes
       comments = await getComments(INV_API_URL.concat(`comments?item_id=${movie.id}`));
 
       if (comments.length > 0) {
-        // Si hay comentarios, los agregamos al contenedor
         $commentsTable.innerHTML = '';
         comments.forEach((comment) => {
           const $commentItem = document.createElement('li');
@@ -140,24 +137,19 @@ const renderData = () => {
         });
         $numberComments.textContent = ` (${comments.length})`;
       } else {
-        // Si no hay comentarios, mostramos un mensaje indicando que no hay comentarios
-        $commentsTable.innerHTML = '<li>No hay comentarios para esta película.</li>';
+        $commentsTable.innerHTML = '<li>No comments yet.</li>';
         $numberComments.textContent = '';
       }
 
       const $addCommentButton = document.querySelector('.popup-comment-button');
       $addCommentButton.addEventListener('click', async () => {
-        console.log(movie.id);
         const $inputName = document.querySelector('.input-name');
         const $inputComment = document.querySelector('.input-comment');
         if ($inputName.value.trim() && $inputComment.value.trim()) {
           await addComment(movie.id, $inputName.value, $inputComment.value);
           $inputName.value = '';
           $inputComment.value = '';
-
-          // Actualizamos los comentarios después de agregar uno nuevo
           comments = await getComments(INV_API_URL.concat(`comments?item_id=${movie.id}`));
-          console.log(movie.id);
           $commentsTable.innerHTML = '';
           comments.forEach((comment) => {
             const $commentItem = document.createElement('li');
