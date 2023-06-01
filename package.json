@@ -8,6 +8,7 @@
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.27.5",
+    "gh-pages": "^5.0.0",
     "html-webpack-plugin": "^5.5.1",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",
@@ -22,6 +23,7 @@
     "webpack-dev-server": "^4.13.3"
   },
   "name": "javascript-capstone",
+  "homepage":"https://CarlosIgreda.github.io/JavaScript-Capstone",
   "description": "This is the first time at Microverse that we will build a project in a group. Apart from technical knowledge, we will need to use a few new processes and tools. We have been preparing for that with a few individual tasks in the Microverse program, and it is a time to connect all of them together.",
   "version": "1.0.0",
   "main": "index.js",
@@ -342,7 +344,9 @@
     "test": "jest",
     "start": "webpack serve --open",
     "dev": "webpack serve --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -353,6 +357,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/CarlosIgreda/JavaScript-Capstone/issues"
-  },
-  "homepage": "https://github.com/CarlosIgreda/JavaScript-Capstone#readme"
+  }
 }
